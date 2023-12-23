@@ -15,15 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('guest')->group(function () {
-    Route::get('/', function () {
-        return view('pages.auth.login');
-    });
-    Route::get('/login', function () {
-        return view('pages.auth.login');
-    });
+Route::get('/', function () {
+    return view('pages.auth.login');
 });
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('home', function () {

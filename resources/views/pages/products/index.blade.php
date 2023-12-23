@@ -49,7 +49,7 @@
                                     <table class="table-striped table">
                                         <tr>
                                             <th>Name</th>
-                                            <th>Price</th>
+                                            <th>Price (Rp)</th>
                                             <th>Stock</th>
                                             <th>Category</th>
                                             <th>Action</th>
@@ -57,7 +57,7 @@
                                         @foreach ($products as $product)
                                             <tr>
                                                 <td>{{ $product->name }}</td>
-                                                <td>{{ $product->price }}</td>
+                                                <td>{{ number_format($product->price, 0, ',', '.') }}</td>
                                                 <td>{{ $product->stock }}</td>
                                                 <td>{{ $product->category }}</td>
                                                 <td>
